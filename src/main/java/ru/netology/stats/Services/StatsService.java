@@ -42,7 +42,7 @@ public class StatsService {
         return (int) sum / month;
     }
 
-    public int SalesBelowAverage(long[] sales) {
+    public int salesBelowAverage(long[] sales) {
         int numberOfMonths = 0;
         long sum = 0;
         int Month = 12;
@@ -58,7 +58,7 @@ public class StatsService {
     }
 
 
-    public int SalesHigherAverage(long[] sales) {
+    public int salesHigherAverage(long[] sales) {
         int numberOfMonths = 0;
         long sum = 0;
         int Month = 12;

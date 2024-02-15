@@ -48,22 +48,22 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void SalesBelowAverage() {
+    public void salesBelowAverage() {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 5;
-        int actual = service.SalesBelowAverage(sales);
+        int actual = service.salesBelowAverage(sales);
         Assertions.assertEquals(expected, actual);
 
 
     }
 
     @Test
-    public void SalesHigherAverage() {
+    public void salesHigherAverage() {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 5;
-        int actual = service.SalesHigherAverage(sales);
+        int actual = service.salesHigherAverage(sales);
         Assertions.assertEquals(expected, actual);
 
 
