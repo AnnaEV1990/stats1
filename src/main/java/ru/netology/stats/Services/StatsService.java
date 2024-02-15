@@ -1,7 +1,7 @@
 package ru.netology.stats.Services;
 
 public class StatsService {
-    private int i;
+
 
     public int minSales(long[] sales) {
         int minMonth = 0;
@@ -43,32 +43,28 @@ public class StatsService {
     }
 
     public int SalesBelowAverage(long[] sales) {
-        long sum = 0;
-        int Month = 12;
-        for (long i : sales) {
-            sum += i;
+        int numberOfMonths = 0;
+        for (long sale : sales) {
+            if (sale < 15) {
+                numberOfMonths++;
+            }
+
         }
-        int average = (int) sum / Month;
-        int NumberOfMonths = 0;
-        if (sales[i] < average) {
-            NumberOfMonths++;
-        }
-        return NumberOfMonths;
+
+        return numberOfMonths;
     }
 
 
     public int SalesHigherAverage(long[] sales) {
-        long sum = 0;
-        int Month = 12;
-        for (long i : sales) {
-            sum += i;
+        int numberOfMonths = 0;
+        for (long sale : sales) {
+            if (sale > 15) {
+                numberOfMonths++;
+            }
+
         }
-        int average = (int) sum / Month;
-        int NumberOfMonths = 0;
-        if (sales[i] > average) {
-            NumberOfMonths++;
-        }
-        return NumberOfMonths;
+
+        return numberOfMonths;
     }
 }
 
