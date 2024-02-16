@@ -1,6 +1,8 @@
 package ru.netology.stats.Services;
 
 
+import java.util.stream.IntStream;
+
 public class StatsService {
 
     public int minSales(long[] sales) {
@@ -39,8 +41,8 @@ public class StatsService {
     public int salesBelowAverage(long[] sales) {
         int numberOfMonths = 0;
         long average = averageSales(sales);
-        for (int i = 0; i < sales.length; i++) {
-            if (average > sales[i]) {
+        for (long sale : sales) {
+            if (average > sale) {
                 numberOfMonths++;
             }
         }
@@ -51,11 +53,12 @@ public class StatsService {
     public int salesHigherAverage(long[] sales) {
         int numberOfMonths = 0;
         long average = averageSales(sales);
-        for (int i = 0; i < sales.length; i++) {
-            if (average < sales[i]) {
+        for (long sale : sales) {
+            if (average < sale) {
                 numberOfMonths++;
             }
         }
+
         return numberOfMonths;
     }
 }
